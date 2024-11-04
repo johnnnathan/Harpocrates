@@ -1,9 +1,11 @@
 #include "MyWindow.h"
-#include "EncodingType.h"
-#include "EncodingHelper.h"
 #include <QVBoxLayout>
+#include "EncodingHelper.h"
+#include "EncodingType.h"
 
-MyWindow::MyWindow(QWidget *parent) : QWidget(parent) {
+MyWindow::MyWindow(QWidget *parent)
+    : QWidget(parent)
+{
     QVBoxLayout *layout = new QVBoxLayout(this);
 
     encodingTypeDropdown = new QComboBox(this);
@@ -13,7 +15,6 @@ MyWindow::MyWindow(QWidget *parent) : QWidget(parent) {
     encodingTypeDropdown->addItem("Decimal");
     encodingTypeDropdown->addItem("Hex");
     encodingTypeDropdown->addItem("ASCII");
-
 
     layout->addWidget(encodingTypeDropdown);
     textField = new QLineEdit(this);
@@ -28,18 +29,22 @@ MyWindow::MyWindow(QWidget *parent) : QWidget(parent) {
     // Connect the editingFinished signal to handleInput slot
     connect(textField, &QLineEdit::editingFinished, this, &MyWindow::handleInput);
     // Connect the Encoding Type Dropdown menu for handling
-    connect(encodingTypeDropdown, &QComboBox::currentIndexChanged, this, &MyWindow::handleDropdownChange);
-
+    connect(encodingTypeDropdown,
+            &QComboBox::currentIndexChanged,
+            this,
+            &MyWindow::handleDropdownChange);
 }
 
-void MyWindow::handleInput() {
+void MyWindow::handleInput()
+{
     QString inputText = textField->text().toUpper();
     EncodingType encoding = getEncodingType(encodingTypeDropdown->currentIndex());
-    encodingToDecimal(encoding, inputText);
-    displayLabel->setText("You entered: " + inputText);
+    int result = encodingToDecimal(encoding, inputText);
+    displayLabel->setText(inputText + "->" + QString::number(result));
 }
 
-void MyWindow::handleDropdownChange(int index) {
+void MyWindow::handleDropdownChange(int index)
+{
     QString selectedItem = encodingTypeDropdown->currentText();
     displayLabel->setText("Selected: " + selectedItem);
 }

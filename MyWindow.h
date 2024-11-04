@@ -1,21 +1,21 @@
 #ifndef MYWINDOW_H
 #define MYWINDOW_H
 
-#include <QWidget>
+#include <QComboBox>
 #include <QLabel>
 #include <QLineEdit>
-#include <QComboBox>
+#include <QWidget>
 
-class MyWindow : public QWidget {
+class MyWindow : public QWidget
+{
     Q_OBJECT
 
 public:
     MyWindow(QWidget *parent = nullptr);
 
 private slots:
-    void handleDropdownChange(int index);  // Slot for dropdown changes
-    void handleInput();  // Declare the slot
-
+    void handleDropdownChange(int index); // Slot for dropdown changes
+    void handleInput();                   // Declare the slot
 
 private:
     QLineEdit *textField;
