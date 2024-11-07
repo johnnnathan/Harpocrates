@@ -4,11 +4,11 @@
 
 ## Current Plans
 
-- **Hex Calculator**  
+- **Hex Calculator**  - 55% Done
   Convert and calculate hexadecimal, decimal, and binary values easily.
 
-- **String Operations**  
+- **String Operations**  - 0% Done
   Tools for encoding, decoding, and manipulating strings.
 
-- **Notes Tab**  
+- **Notes Tab**  - 0% Done
   Take quick notes and save key details without leaving the tool. 
