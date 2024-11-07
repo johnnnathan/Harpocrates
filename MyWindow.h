@@ -17,10 +17,14 @@ private slots:
     void handleDropdownChange(int index); // Slot for dropdown changes
     void handleInput();                   // Declare the slot
 
+
 private:
     QLineEdit *textField;
     QLabel *displayLabel;
     QComboBox *encodingTypeDropdown;
+    QLineEdit *outputField;
+    QComboBox *outputEncodingDropdown;
+
 };
 
 #endif // MYWINDOW_H

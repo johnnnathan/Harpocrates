@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/dimi/Desktop/Qt/Haprocrates -B/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug
+  command = /usr/bin/cmake --regenerate-during-build -S/home/dimi/Harpocrates -B/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug
   description = Re-running CMake...
   generator = 1
 

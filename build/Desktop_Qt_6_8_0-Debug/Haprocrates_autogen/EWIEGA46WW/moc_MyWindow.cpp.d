@@ -1,5 +1,5 @@
-/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/EWIEGA46WW/moc_MyWindow.cpp: /home/dimi/Desktop/Qt/Haprocrates/MyWindow.h \
-  /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/moc_predefs.h \
+/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/EWIEGA46WW/moc_MyWindow.cpp: /home/dimi/Harpocrates/MyWindow.h \
+  /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/moc_predefs.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/q20functional.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/q20iterator.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/q20memory.h \

@@ -5,7 +5,11 @@
 #include "EncodingType.h"
 
 EncodingType getEncodingType(int dropdownSelection);
-int encodingToDecimal(EncodingType encoding, QString data);
+long int encodingToDecimal(EncodingType encoding, QString data);
 QString decimalToEncoding(EncodingType endEncoding, int value);
+long int binaryToDecimal(QString data);
+long int hexToDecimal(QString data);
+bool checkLength(int length, int modVal, int baseCase);
+void popup(QString message);
 
 #endif // ENCODINGHELPER_H

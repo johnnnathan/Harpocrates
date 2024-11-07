@@ -1,15 +1,15 @@
 Haprocrates_autogen/timestamp: \
-	/home/dimi/Desktop/Qt/Haprocrates/CMakeLists.txt \
-	/home/dimi/Desktop/Qt/Haprocrates/EncodingHelper.cpp \
-	/home/dimi/Desktop/Qt/Haprocrates/EncodingHelper.h \
-	/home/dimi/Desktop/Qt/Haprocrates/EncodingType.h \
-	/home/dimi/Desktop/Qt/Haprocrates/MyWindow.cpp \
-	/home/dimi/Desktop/Qt/Haprocrates/MyWindow.h \
-	/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/.qtc/package-manager/auto-setup.cmake \
-	/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake \
-	/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/3.22.1/CMakeSystem.cmake \
-	/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/moc_predefs.h \
-	/home/dimi/Desktop/Qt/Haprocrates/main.cpp \
+	/home/dimi/Harpocrates/CMakeLists.txt \
+	/home/dimi/Harpocrates/EncodingHelper.cpp \
+	/home/dimi/Harpocrates/EncodingHelper.h \
+	/home/dimi/Harpocrates/EncodingType.h \
+	/home/dimi/Harpocrates/MyWindow.cpp \
+	/home/dimi/Harpocrates/MyWindow.h \
+	/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/.qtc/package-manager/auto-setup.cmake \
+	/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake \
+	/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/3.22.1/CMakeSystem.cmake \
+	/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/moc_predefs.h \
+	/home/dimi/Harpocrates/main.cpp \
 	/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/q20functional.h \
 	/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/q20iterator.h \
 	/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/q20memory.h \

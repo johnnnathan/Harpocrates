@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/
+cmake_ninja_workdir = /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target Haprocrates
 
@@ -49,35 +49,35 @@ cmake_ninja_workdir = /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-D
 
 build cmake_object_order_depends_target_Haprocrates: phony || Haprocrates_autogen Haprocrates_autogen/mocs_compilation.cpp Haprocrates_autogen/timestamp Haprocrates_autogen_timestamp_deps
 
-build CMakeFiles/Haprocrates.dir/Haprocrates_autogen/mocs_compilation.cpp.o: CXX_COMPILER__Haprocrates_Debug /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_Haprocrates
+build CMakeFiles/Haprocrates.dir/Haprocrates_autogen/mocs_compilation.cpp.o: CXX_COMPILER__Haprocrates_Debug /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_Haprocrates
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/Haprocrates.dir/Haprocrates_autogen/mocs_compilation.cpp.o.d
   FLAGS = -DQT_QML_DEBUG -g -fPIC -std=gnu++17
-  INCLUDES = -I/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/include -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtCore -isystem /home/dimi/Qt/6.8.0/gcc_64/include -isystem /home/dimi/Qt/6.8.0/gcc_64/mkspecs/linux-g++ -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtGui
+  INCLUDES = -I/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/include -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtCore -isystem /home/dimi/Qt/6.8.0/gcc_64/include -isystem /home/dimi/Qt/6.8.0/gcc_64/mkspecs/linux-g++ -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtGui
   OBJECT_DIR = CMakeFiles/Haprocrates.dir
   OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir/Haprocrates_autogen
 
-build CMakeFiles/Haprocrates.dir/main.cpp.o: CXX_COMPILER__Haprocrates_Debug /home/dimi/Desktop/Qt/Haprocrates/main.cpp || cmake_object_order_depends_target_Haprocrates
+build CMakeFiles/Haprocrates.dir/main.cpp.o: CXX_COMPILER__Haprocrates_Debug /home/dimi/Harpocrates/main.cpp || cmake_object_order_depends_target_Haprocrates
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/Haprocrates.dir/main.cpp.o.d
   FLAGS = -DQT_QML_DEBUG -g -fPIC -std=gnu++17
-  INCLUDES = -I/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/include -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtCore -isystem /home/dimi/Qt/6.8.0/gcc_64/include -isystem /home/dimi/Qt/6.8.0/gcc_64/mkspecs/linux-g++ -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtGui
+  INCLUDES = -I/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/include -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtCore -isystem /home/dimi/Qt/6.8.0/gcc_64/include -isystem /home/dimi/Qt/6.8.0/gcc_64/mkspecs/linux-g++ -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtGui
   OBJECT_DIR = CMakeFiles/Haprocrates.dir
   OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir
 
-build CMakeFiles/Haprocrates.dir/MyWindow.cpp.o: CXX_COMPILER__Haprocrates_Debug /home/dimi/Desktop/Qt/Haprocrates/MyWindow.cpp || cmake_object_order_depends_target_Haprocrates
+build CMakeFiles/Haprocrates.dir/MyWindow.cpp.o: CXX_COMPILER__Haprocrates_Debug /home/dimi/Harpocrates/MyWindow.cpp || cmake_object_order_depends_target_Haprocrates
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/Haprocrates.dir/MyWindow.cpp.o.d
   FLAGS = -DQT_QML_DEBUG -g -fPIC -std=gnu++17
-  INCLUDES = -I/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/include -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtCore -isystem /home/dimi/Qt/6.8.0/gcc_64/include -isystem /home/dimi/Qt/6.8.0/gcc_64/mkspecs/linux-g++ -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtGui
+  INCLUDES = -I/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/include -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtCore -isystem /home/dimi/Qt/6.8.0/gcc_64/include -isystem /home/dimi/Qt/6.8.0/gcc_64/mkspecs/linux-g++ -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtGui
   OBJECT_DIR = CMakeFiles/Haprocrates.dir
   OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir
 
-build CMakeFiles/Haprocrates.dir/EncodingHelper.cpp.o: CXX_COMPILER__Haprocrates_Debug /home/dimi/Desktop/Qt/Haprocrates/EncodingHelper.cpp || cmake_object_order_depends_target_Haprocrates
+build CMakeFiles/Haprocrates.dir/EncodingHelper.cpp.o: CXX_COMPILER__Haprocrates_Debug /home/dimi/Harpocrates/EncodingHelper.cpp || cmake_object_order_depends_target_Haprocrates
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/Haprocrates.dir/EncodingHelper.cpp.o.d
   FLAGS = -DQT_QML_DEBUG -g -fPIC -std=gnu++17
-  INCLUDES = -I/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/include -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtCore -isystem /home/dimi/Qt/6.8.0/gcc_64/include -isystem /home/dimi/Qt/6.8.0/gcc_64/mkspecs/linux-g++ -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtGui
+  INCLUDES = -I/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/include -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtCore -isystem /home/dimi/Qt/6.8.0/gcc_64/include -isystem /home/dimi/Qt/6.8.0/gcc_64/mkspecs/linux-g++ -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtGui
   OBJECT_DIR = CMakeFiles/Haprocrates.dir
   OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir
 
@@ -103,7 +103,7 @@ build Haprocrates: CXX_EXECUTABLE_LINKER__Haprocrates_Debug CMakeFiles/Haprocrat
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -114,7 +114,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake --regenerate-during-build -S/home/dimi/Desktop/Qt/Haprocrates -B/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug
+  COMMAND = cd /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake --regenerate-during-build -S/home/dimi/Harpocrates -B/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -132,7 +132,7 @@ build list_install_components: phony
 # Utility command for install
 
 build CMakeFiles/install.util: CUSTOM_COMMAND all
-  COMMAND = cd /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -144,7 +144,7 @@ build install: phony CMakeFiles/install.util
 # Utility command for install/local
 
 build CMakeFiles/install/local.util: CUSTOM_COMMAND all
-  COMMAND = cd /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -156,7 +156,7 @@ build install/local: phony CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
-  COMMAND = cd /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -180,16 +180,16 @@ build Haprocrates_autogen: phony CMakeFiles/Haprocrates_autogen Haprocrates_auto
 # Custom command for Haprocrates_autogen/timestamp
 
 build Haprocrates_autogen/timestamp Haprocrates_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}Haprocrates_autogen/timestamp ${cmake_ninja_workdir}Haprocrates_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /home/dimi/Qt/6.8.0/gcc_64/libexec/moc /home/dimi/Qt/6.8.0/gcc_64/libexec/uic || Haprocrates_autogen_timestamp_deps
-  COMMAND = cd /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake -E cmake_autogen /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/Haprocrates_autogen.dir/AutogenInfo.json Debug && /usr/bin/cmake -E touch /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/dimi/Desktop/Qt/Haprocrates /home/dimi/Desktop/Qt/Haprocrates /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/deps /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/d/922881aa2c52503735a61697afc42022a32652ebfb9a15dac830f48210e46016.d
+  COMMAND = cd /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug && /usr/bin/cmake -E cmake_autogen /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/Haprocrates_autogen.dir/AutogenInfo.json Debug && /usr/bin/cmake -E touch /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/dimi/Harpocrates /home/dimi/Harpocrates /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/deps /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/d/a1a7fa2261e35776e2d8febbf55222ef28766a42ac8f2f12b42eff11b8920379.d
   DESC = Automatic MOC and UIC for target Haprocrates
-  depfile = /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/d/922881aa2c52503735a61697afc42022a32652ebfb9a15dac830f48210e46016.d
+  depfile = /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/d/a1a7fa2261e35776e2d8febbf55222ef28766a42ac8f2f12b42eff11b8920379.d
   restat = 1
 
 
 #############################################
 # Phony custom command for CMakeFiles/Haprocrates_autogen_timestamp_deps
 
-build CMakeFiles/Haprocrates_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Haprocrates_autogen_timestamp_deps: phony /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Core.so.6.8.0 /home/dimi/Qt/6.8.0/gcc_64/libexec/uic /home/dimi/Qt/6.8.0/gcc_64/libexec/moc /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Widgets.so.6.8.0
+build CMakeFiles/Haprocrates_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Haprocrates_autogen_timestamp_deps: phony /home/dimi/Qt/6.8.0/gcc_64/libexec/moc /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Widgets.so.6.8.0 /home/dimi/Qt/6.8.0/gcc_64/libexec/uic /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Core.so.6.8.0
 
 
 #############################################
@@ -206,7 +206,7 @@ build CMakeFiles/Haprocrates_autogen | ${cmake_ninja_workdir}CMakeFiles/Haprocra
 # =============================================================================
 
 #############################################
-# Folder: /home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug
+# Folder: /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug
 
 build all: phony Haprocrates
 

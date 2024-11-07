@@ -1,16 +1,16 @@
 {
-	"BUILD_DIR" : "/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen",
-	"CMAKE_BINARY_DIR" : "/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/dimi/Desktop/Qt/Haprocrates",
+	"BUILD_DIR" : "/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen",
+	"CMAKE_BINARY_DIR" : "/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/dimi/Harpocrates",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/dimi/Desktop/Qt/Haprocrates/CMakeLists.txt",
-		"/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/.qtc/package-manager/auto-setup.cmake",
-		"/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/3.22.1/CMakeSystem.cmake",
+		"/home/dimi/Harpocrates/CMakeLists.txt",
+		"/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/.qtc/package-manager/auto-setup.cmake",
+		"/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/3.22.1/CMakeSystem.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake",
-		"/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake",
+		"/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake",
 		"/usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake",
@@ -370,33 +370,33 @@
 		"/home/dimi/Qt/6.8.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake",
 		"/usr/share/cmake-3.22/Modules/GNUInstallDirs.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/dimi/Desktop/Qt/Haprocrates",
-	"DEP_FILE" : "/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/dimi/Harpocrates",
+	"DEP_FILE" : "/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "Haprocrates_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/dimi/Desktop/Qt/Haprocrates/EncodingHelper.h",
+			"/home/dimi/Harpocrates/EncodingHelper.h",
 			"MU",
 			"EWIEGA46WW/moc_EncodingHelper.cpp",
 			null
 		],
 		[
-			"/home/dimi/Desktop/Qt/Haprocrates/EncodingType.h",
+			"/home/dimi/Harpocrates/EncodingType.h",
 			"MU",
 			"EWIEGA46WW/moc_EncodingType.cpp",
 			null
 		],
 		[
-			"/home/dimi/Desktop/Qt/Haprocrates/MyWindow.h",
+			"/home/dimi/Harpocrates/MyWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_MyWindow.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -439,22 +439,22 @@
 		"-c",
 		"/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 6,
-	"PARSE_CACHE_FILE" : "/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/Haprocrates_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/Haprocrates_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/home/dimi/Qt/6.8.0/gcc_64/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/home/dimi/Qt/6.8.0/gcc_64/libexec/uic",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 8,
-	"SETTINGS_FILE" : "/home/dimi/Desktop/Qt/Haprocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/Haprocrates_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/Haprocrates_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/dimi/Desktop/Qt/Haprocrates/EncodingHelper.cpp", "MU", null ],
-		[ "/home/dimi/Desktop/Qt/Haprocrates/MyWindow.cpp", "MU", null ],
-		[ "/home/dimi/Desktop/Qt/Haprocrates/main.cpp", "MU", null ]
+		[ "/home/dimi/Harpocrates/EncodingHelper.cpp", "MU", null ],
+		[ "/home/dimi/Harpocrates/MyWindow.cpp", "MU", null ],
+		[ "/home/dimi/Harpocrates/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
