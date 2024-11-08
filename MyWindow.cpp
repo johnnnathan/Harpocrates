@@ -1,5 +1,4 @@
 #include "MyWindow.h"
-#include <QRegularExpression>
 #include <QVBoxLayout>
 #include "EncodingHelper.h"
 #include "EncodingType.h"
@@ -53,44 +52,18 @@ MyWindow::MyWindow(QWidget *parent)
 
 void MyWindow::handleInput()
 {
-    QRegularExpression hexRegex("^[0-9A-F]*$");
-    QString inputText = textField->text().toUpper().remove(" ");
+
+    QString inputText = textField->text().toUpper();
+
     EncodingType encoding = getEncodingType(encodingTypeDropdown->currentIndex());
     EncodingType outputEncoding = getEncodingType(outputEncodingDropdown->currentIndex());
 
+    int step = isValid(encoding, inputText);
 
-    if (outputEncoding == ASCII){
 
-    }
-    bool isValid = false;
-    switch (encoding) {
-    case BINARY:
-        isValid = (inputText.length() % 8 == 0)
-                  && (inputText.count('0') + inputText.count('1') == inputText.length());
-        break;
-    case HEX:
-        isValid =  inputText.contains(hexRegex); // Check for valid hex characters
-        break;
-    case DECIMAL:
-        isValid = inputText.toInt();
-        break;
-    case ASCII:
-        isValid = !inputText.isEmpty();
-        break;
-    default:
-        isValid = false;
-        break;
-    }
-
-    if (isValid) {
+    if (step != 0) {
         textField->setStyleSheet("background-color: green;");
-        if (encoding == BINARY || encoding == HEX) {
-            // Perform conversion if valid
-            long int result = encodingToDecimal(encoding, inputText);
-            displayLabel->setText(inputText + " -> " + QString::number(result));
-        } else {
-            displayLabel->setText("Valid " + encodingTypeDropdown->currentText() + " input.");
-        }
+        outputField->setText(encode(encoding, outputEncoding, inputText,step));
     } else {
         textField->setStyleSheet("background-color: red;");
         displayLabel->setText("Invalid input for " + encodingTypeDropdown->currentText());

@@ -1,7 +1,7 @@
 #include "EncodingHelper.h"
 #include <QDebug>
 #include <QMessageBox>
-
+#include "EncodingType.h"
 
 
 EncodingType getEncodingType(int dropdownSelection)
@@ -43,10 +43,18 @@ long int hexToDecimal(QString data){
     long int sum = 0;
     int decimalValues[length];
     char tempChar;
-    for (int index = length - 1; index > -1; index--){
-        tempChar = data.at(index).toLatin1();
-        sum += (tempChar - 65 + 10) * pow(16, power);
-        power += 1;
+    for (int index = length - 1; index >= 0; index--) {
+        char tempChar = data.at(index).toLatin1();
+        int decimalValue;
+
+        if (tempChar >= '0' && tempChar <= '9') {
+            decimalValue = tempChar - '0';
+        } else if (tempChar >= 'A' && tempChar <= 'F') {
+            decimalValue = tempChar - 65 + 10;
+        }
+
+        sum += decimalValue * pow(16, power);
+        power++;
     }
 
     return sum;
@@ -99,5 +107,89 @@ long int encodingToDecimal(EncodingType encoding, QString data)
 
     return 0;
 }
+
+
+int isValid(EncodingType encoding, QString data){
+    bool isValid = false;
+    int step = 0;
+    QString temp = data;
+    QRegularExpression hexRegex("^[0-9A-F]*$");
+
+    switch (encoding) {
+    case BINARY:
+
+        isValid = (temp.length() % 8 == 0)
+                  && (temp.count('0') + temp.count('1') == temp.length());
+        if (isValid){
+            step = 8;
+        }
+        break;
+    case HEX:
+
+        isValid =  temp.contains(hexRegex); // Check for valid hex characters
+        if (isValid){
+            step = 2;
+        }
+        break;
+    case DECIMAL:
+
+        isValid = temp.remove(" ").toInt();
+        if(isValid) {
+            step = 1;
+        }
+        break;
+    case ASCII:
+
+        isValid = !temp.isEmpty();
+        if (isValid) {
+            step =  1;
+        }
+        break;
+    default:
+        step = 0;
+
+    }
+
+    return step;
+}
+
+
+QString encode(EncodingType startEncoding, EncodingType endEncoding, QString data, int step){
+    if (startEncoding == BINARY || startEncoding == HEX) {
+        if (endEncoding == ASCII){
+            QString resultString;
+            for (int byte = 0; byte < data.length(); byte += step){
+                QString chunk = data.mid(byte, step); // Get subset
+
+                long int decimalValue = encodingToDecimal(startEncoding, chunk);
+                resultString.append(static_cast<char>(decimalValue)); // Convert to ASCII character
+            }
+            return(resultString);
+
+        }
+        else{
+            long int result = encodingToDecimal(startEncoding, data);
+            return QString::number(result);
+
+        }
+    }
+    else if (startEncoding == DECIMAL){
+        if (endEncoding == ASCII){
+            QString resultString;
+            QStringList bytes = data.split(" " , Qt::SkipEmptyParts);
+            for (const QString &byte : bytes){
+                int decimalValue = byte.toInt();
+
+                resultString.append(static_cast<char>(decimalValue));
+            }
+            return resultString;
+
+        }
+    }
+
+
+
+}
+
 
 QString decimalToEncoding(EncodingType endEncoding, int value);

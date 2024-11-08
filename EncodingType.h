@@ -2,7 +2,7 @@
 #define ENCODINGTYPE_H
 
 enum EncodingType {
-    BINARY,
+    BINARY = 1,
     DECIMAL,
     HEX,
     ASCII,
