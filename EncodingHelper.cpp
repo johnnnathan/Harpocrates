@@ -153,6 +153,49 @@ int isValid(EncodingType encoding, QString data){
     return step;
 }
 
+QString decimalToBinary(long int value){
+
+    QString output;
+    const int base = 2;
+    while (value != 0){
+        int remainder = value % base;
+        char character;
+        if (remainder){
+            character = '1';
+        }else {
+            character = '0';
+        }
+        output.prepend(character);
+        value /= base;
+    }
+    return output;
+}
+
+QString decimalToHex(long int value){
+
+    QString output;
+    const int base = 16;
+    while (value != 0){
+        int remainder = value % base;
+        char character;
+        if (remainder > 9){
+
+            character = remainder + 55;
+        }else {
+            character = remainder + 48;
+        }
+        output.prepend(character);
+        value /= base;
+    }
+    return output;
+
+}
+
+QString decimalToEncoding(EncodingType endEncoding, long int value){
+    if (endEncoding == HEX){return decimalToHex(value);}
+    if (endEncoding == BINARY){return decimalToBinary(value);}
+    return "0";
+}
 
 QString encode(EncodingType startEncoding, EncodingType endEncoding, QString data, int step){
     if (startEncoding == BINARY || startEncoding == HEX) {
@@ -173,23 +216,24 @@ QString encode(EncodingType startEncoding, EncodingType endEncoding, QString dat
 
         }
     }
-    else if (startEncoding == DECIMAL){
-        if (endEncoding == ASCII){
-            QString resultString;
-            QStringList bytes = data.split(" " , Qt::SkipEmptyParts);
-            for (const QString &byte : bytes){
-                int decimalValue = byte.toInt();
+    if (startEncoding == DECIMAL && endEncoding == ASCII){
 
-                resultString.append(static_cast<char>(decimalValue));
-            }
-            return resultString;
+        QString resultString;
+        QStringList bytes = data.split(" " , Qt::SkipEmptyParts);
+        for (const QString &byte : bytes){
+            int decimalValue = byte.toInt();
 
+            resultString.append(static_cast<char>(decimalValue));
         }
+        return resultString;
+
     }
+    int decimalData = encodingToDecimal(startEncoding, data);
+    return decimalToEncoding(endEncoding, decimalData);
 
 
 
 }
 
 
-QString decimalToEncoding(EncodingType endEncoding, int value);
+
