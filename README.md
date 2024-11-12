@@ -4,7 +4,7 @@
 
 ## Current Plans
 
-- **Hex Calculator - 80% Done** <br>
+- **Hex Calculator - 99% Done** <br>
   Convert and calculate hexadecimal, decimal, and binary values easily.
 
 - **String Operations - 0% Done** <br>
