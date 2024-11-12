@@ -5,7 +5,9 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QWidget>
-
+#include <QTabWidget>
+#include <QTableWidget>
+#include <QPixmap>
 
 class MyWindow : public QWidget
 {
@@ -16,14 +18,32 @@ public:
 private slots:
     void handleDropdownChange(int index); // Slot for dropdown changes
     void handleInput();                   // Declare the slot
+    void onTabChanged(int index);
 
 
 private:
     QLineEdit *textField;
-    QLabel *displayLabel;
-    QComboBox *encodingTypeDropdown;
     QLineEdit *outputField;
+
+    QLabel *displayLabel;
+
+    QComboBox *encodingTypeDropdown;
     QComboBox *outputEncodingDropdown;
+
+    QTabWidget *tabWidget;
+
+    QWidget *homeTab;
+    QWidget *encodingTab;
+    QWidget *calculatorTab;
+    QWidget *notesTab;
+    QWidget *cheatSheetTab;
+
+    void setupHomeTab();
+    void setupEncodingTab();
+    void setupCalculatorTab();
+    void setupNotesTab();
+    void setupCheatSheetTab();
+
 
 };
 

@@ -28,6 +28,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         EncodingType.h
         EncodingHelper.h
         EncodingHelper.cpp
+        resources.qrc
+
+
+
 
 
     )

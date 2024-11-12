@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../Desktop/Images/HarpoLogo/logo.png</file>
+    </qresource>
+</RCC>

@@ -53,6 +53,7 @@
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qhashfunctions.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qiodevice.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qiodevicebase.h
+ mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qitemselectionmodel.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qiterable.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qiterator.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qlatin1stringview.h
@@ -130,6 +131,7 @@
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qversiontagging.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qxptype_traits.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qyieldcpu.h
+ mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtGui/QPixmap
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtGui/qaction.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtGui/qbitmap.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtGui/qbrush.h
@@ -164,8 +166,12 @@
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QComboBox
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QLabel
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QLineEdit
+ mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QTabWidget
+ mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QTableWidget
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QWidget
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractitemdelegate.h
+ mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractitemview.h
+ mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractscrollarea.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractslider.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractspinbox.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qcombobox.h
@@ -178,6 +184,8 @@
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qstyle.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qstyleoption.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtabbar.h
+ mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtableview.h
+ mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtablewidget.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtabwidget.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgets-config.h
  mdp:/home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgetsexports.h

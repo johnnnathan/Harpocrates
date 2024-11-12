@@ -10,6 +10,7 @@ Haprocrates_autogen/timestamp: \
   CMakeFiles/3.22.1/CMakeSystem.cmake \
   Haprocrates_autogen/moc_predefs.h \
   ../../main.cpp \
+  ../../resources.qrc \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/q20functional.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/q20iterator.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/q20memory.h \
@@ -58,6 +59,7 @@ Haprocrates_autogen/timestamp: \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qhashfunctions.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qiodevice.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qiodevicebase.h \
+  /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qitemselectionmodel.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qiterable.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qiterator.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qlatin1stringview.h \
@@ -135,6 +137,7 @@ Haprocrates_autogen/timestamp: \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qversiontagging.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qxptype_traits.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtCore/qyieldcpu.h \
+  /home/dimi/Qt/6.8.0/gcc_64/include/QtGui/QPixmap \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtGui/qaction.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtGui/qbitmap.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtGui/qbrush.h \
@@ -169,8 +172,12 @@ Haprocrates_autogen/timestamp: \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QComboBox \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QLabel \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QLineEdit \
+  /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QTabWidget \
+  /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QTableWidget \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/QWidget \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+  /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractitemview.h \
+  /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractscrollarea.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractslider.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qcombobox.h \
@@ -183,6 +190,8 @@ Haprocrates_autogen/timestamp: \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qstyle.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qstyleoption.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtabbar.h \
+  /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtableview.h \
+  /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtablewidget.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtabwidget.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets/qtwidgetsexports.h \

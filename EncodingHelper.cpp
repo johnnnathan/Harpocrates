@@ -194,6 +194,7 @@ QString decimalToHex(long int value){
 QString decimalToEncoding(EncodingType endEncoding, long int value){
     if (endEncoding == HEX){return decimalToHex(value);}
     if (endEncoding == BINARY){return decimalToBinary(value);}
+    if (endEncoding == DECIMAL){return QString::number(value);}
     return "0";
 }
 
