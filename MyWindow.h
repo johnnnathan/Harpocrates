@@ -19,16 +19,23 @@ private slots:
     void handleDropdownChange(int index); // Slot for dropdown changes
     void handleInput();                   // Declare the slot
     void onTabChanged(int index);
-
+    void performCalculation();
 
 private:
-    QLineEdit *textField;
-    QLineEdit *outputField;
+    QLineEdit *encoderInputField;
+    QLineEdit *encoderOutputField;
+    QLineEdit *calculatorFirstInputField;
+    QLineEdit *calculatorSecondInputField;
+    QLineEdit *calculatorOutput;
 
     QLabel *displayLabel;
 
     QComboBox *encodingTypeDropdown;
     QComboBox *outputEncodingDropdown;
+    QComboBox *calculatorFirstInputDropdown;
+    QComboBox *calculatorSecondInputDropdown;
+    QComboBox *operationDropdown;
+    QComboBox *calculatorOutputEncoding;
 
     QTabWidget *tabWidget;
 

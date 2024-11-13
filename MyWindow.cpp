@@ -2,7 +2,7 @@
 #include <QVBoxLayout>
 #include "EncodingHelper.h"
 #include "EncodingType.h"
-
+#include <QPushButton>
 
 MyWindow::MyWindow(QWidget *parent)
     : QWidget(parent)
@@ -15,10 +15,10 @@ MyWindow::MyWindow(QWidget *parent)
     setupHomeTab();
     setupEncodingTab();
     setLayout(mainLayout);
-
+    setupCalculatorTab();
     this->setFixedSize(this->size());
 
-    connect(textField, &QLineEdit::textChanged, this, &MyWindow::handleInput);
+    connect(encoderInputField, &QLineEdit::textChanged, this, &MyWindow::handleInput);
     connect(encodingTypeDropdown, &QComboBox::currentIndexChanged, this, &MyWindow::handleDropdownChange);
     connect(tabWidget, &QTabWidget::currentChanged, this, &MyWindow::onTabChanged);
 }
@@ -39,14 +39,14 @@ void MyWindow::setupHomeTab(){
     titleLabel->setFont(titleFont);
     homeLayout->addWidget(titleLabel);
 
-    QLabel *authorLabel = new QLabel("by: name", this);
+    QLabel *authorLabel = new QLabel("by: Dimitrios Tsiplakis", this);
     authorLabel->setAlignment(Qt::AlignCenter);
     QFont authorFont = authorLabel->font();
     authorFont.setPointSize(14);
     authorLabel->setFont(authorFont);
     homeLayout->addWidget(authorLabel);
 
-    QLabel *descriptionLabel = new QLabel("A RE multi-tool", this);
+    QLabel *descriptionLabel = new QLabel("A Reverse Engineering multi-tool", this);
     descriptionLabel->setAlignment(Qt::AlignCenter);
     QFont descriptionFont = descriptionLabel->font();
     descriptionFont.setPointSize(12);
@@ -67,10 +67,115 @@ void MyWindow::setupHomeTab(){
     tabWidget->addTab(homeTab, "Home");
 }
 
-void MyWindow::setupCalculatorTab(){}
+void MyWindow::setupCalculatorTab(){
+    calculatorTab = new QWidget(this);
+    QVBoxLayout *calculatorLayout = new QVBoxLayout(calculatorTab);
+
+    calculatorFirstInputDropdown = new QComboBox(this);
+    calculatorFirstInputDropdown->addItem("Binary");
+    calculatorFirstInputDropdown->addItem("Decimal");
+    calculatorFirstInputDropdown->addItem("Hex");
+    calculatorFirstInputDropdown->addItem("ASCII");
+
+    calculatorSecondInputDropdown = new QComboBox(this);
+    calculatorSecondInputDropdown->addItem("Binary");
+    calculatorSecondInputDropdown->addItem("Decimal");
+    calculatorSecondInputDropdown->addItem("Hex");
+    calculatorSecondInputDropdown->addItem("ASCII");
+
+    calculatorOutputEncoding = new QComboBox(this);
+    calculatorOutputEncoding->addItem("Binary");
+    calculatorOutputEncoding->addItem("Decimal");
+    calculatorOutputEncoding->addItem("Hex");
+    calculatorOutputEncoding->addItem("ASCII");
+
+    calculatorFirstInputField = new QLineEdit(this);
+    calculatorFirstInputField->setPlaceholderText("Value...");
+    calculatorSecondInputField = new QLineEdit(this);
+    calculatorSecondInputField->setPlaceholderText("Value...");
+    calculatorOutput = new QLineEdit(this);
+    calculatorOutput->setPlaceholderText("Output...");
+
+    QPushButton *calculateButton = new QPushButton("=", this);
+
+    operationDropdown = new QComboBox(this);
+
+    operationDropdown->addItem("+");
+    operationDropdown->addItem("-");
+    operationDropdown->addItem("*");
+    operationDropdown->addItem("/");
+    operationDropdown->addItem("%");
+    QGridLayout *gridLayout = new QGridLayout();
+    calculatorSecondInputDropdown->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    calculatorSecondInputField->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+
+    // Top row: Input type dropdowns side by side
+    gridLayout->addWidget(calculatorFirstInputDropdown, 0, 0);
+    gridLayout->addWidget(calculatorSecondInputDropdown, 0, 2);  // Move this above the second input field
+
+    // Second row: First input field, operation dropdown, second input field, and calculate button
+    gridLayout->addWidget(calculatorFirstInputField, 1, 0);
+    gridLayout->addWidget(operationDropdown, 1, 1);
+    gridLayout->addWidget(calculatorSecondInputField, 1, 2);  // Ensure this is below the second dropdown
+    gridLayout->addWidget(calculateButton, 1, 3);
+
+    gridLayout->addWidget(calculatorOutput, 2,0,1,3);
+    gridLayout->addWidget(calculatorOutputEncoding, 2, 3);
+
+    calculatorLayout->addLayout(gridLayout);
+    tabWidget->addTab(calculatorTab, "Calculator");
+
+    connect(calculateButton, &QPushButton::clicked, this, &MyWindow::performCalculation);
+    connect(calculatorFirstInputField, &QLineEdit::textChanged, this, &MyWindow::handleInput);
+    connect(calculatorSecondInputField, &QLineEdit::textChanged, this, &MyWindow::handleInput);
+
+
+
+}
 void MyWindow::setupNotesTab(){}
 void MyWindow::setupCheatSheetTab(){}
 
+void MyWindow::performCalculation() {
+    // Retrieve the input value, selected input and output encodings, and operation
+    QString firstInputText = calculatorFirstInputField->text();
+    QString secondInputText = calculatorSecondInputField->text();
+
+    EncodingType firstInputEncoding = getEncodingType(calculatorFirstInputDropdown->currentIndex());
+    EncodingType secondInputEncoding = getEncodingType(calculatorSecondInputDropdown->currentIndex());
+
+    int operation = operationDropdown->currentIndex();
+
+    long int first = encodingToDecimal(firstInputEncoding, firstInputText);
+    long int second = encodingToDecimal(secondInputEncoding, secondInputText);
+    long int result = 0;
+
+    switch (operation) {
+    case 0:
+        result = first + second;
+        break;
+    case 1:
+        result = first - second;
+        break;
+    case 2:
+        result = first * second;
+        break;
+    case 3:
+        result = first / second;
+        break;
+    case 4:
+        result = first % second;
+        break;
+    default:
+        result = 0;
+        break;
+    }
+
+
+
+
+    // Display the result in output field
+    calculatorOutput->setText(decimalToEncoding(getEncodingType(calculatorOutputEncoding->currentIndex()), result));
+}
 
 
 void MyWindow::setupEncodingTab() {
@@ -89,14 +194,14 @@ void MyWindow::setupEncodingTab() {
     encodingTypeDropdown->addItem("Hex");
     encodingTypeDropdown->addItem("ASCII");
 
-    textField = new QLineEdit(this);
-    textField->setPlaceholderText("Input value...");
+    encoderInputField = new QLineEdit(this);
+    encoderInputField->setPlaceholderText("Input value...");
 
     displayLabel = new QLabel(this);
 
     // Add left section widgets to the grid layout
     gridLayout->addWidget(encodingTypeDropdown, 0, 0);
-    gridLayout->addWidget(textField, 1, 0);
+    gridLayout->addWidget(encoderInputField, 1, 0);
     gridLayout->addWidget(displayLabel, 2, 0);
 
     // Right section controls
@@ -106,13 +211,13 @@ void MyWindow::setupEncodingTab() {
     outputEncodingDropdown->addItem("Hex");
     outputEncodingDropdown->addItem("ASCII");
 
-    outputField = new QLineEdit(this);
-    outputField->setPlaceholderText("Output value...");
-    outputField->setReadOnly(true);  // Make output field read-only
+    encoderOutputField = new QLineEdit(this);
+    encoderOutputField->setPlaceholderText("Output value...");
+    encoderOutputField->setReadOnly(true);  // Make output field read-only
 
     // Add right section widgets to the grid layout
     gridLayout->addWidget(outputEncodingDropdown, 0, 1);
-    gridLayout->addWidget(outputField, 1, 1);
+    gridLayout->addWidget(encoderOutputField, 1, 1);
 
     // Add the encoding tab to the main tab widget
     tabWidget->addTab(encodingTab, "Encoding");
@@ -125,20 +230,57 @@ void MyWindow::setupEncodingTab() {
 void MyWindow::handleInput()
 {
 
-    QString inputText = textField->text().toUpper();
+    QString inputText = encoderInputField->text().toUpper();
 
-    EncodingType encoding = getEncodingType(encodingTypeDropdown->currentIndex());
-    EncodingType outputEncoding = getEncodingType(outputEncodingDropdown->currentIndex());
+    QString calculatorFirstInput = calculatorFirstInputField->text().toUpper();
+    QString calculatorSecondInput = calculatorSecondInputField->text().toUpper();
+
+    EncodingType encoding;
+    EncodingType outputEncoding;
+    EncodingType calcFirstEnc;
+    EncodingType calcSecEnc;
+
+    if (tabWidget->currentIndex() == 1){
+        encoding = getEncodingType(encodingTypeDropdown->currentIndex());
+        outputEncoding = getEncodingType(outputEncodingDropdown->currentIndex());
+    }
+    else if (tabWidget->currentIndex() == 2){
+        calcFirstEnc = getEncodingType(calculatorFirstInputDropdown->currentIndex());
+        calcSecEnc = getEncodingType(calculatorSecondInputDropdown->currentIndex());
+
+    }
 
     int step = isValid(encoding, inputText);
+    int stepCalcFirst = isValid(calcFirstEnc, calculatorFirstInput);
+    int stepCalcSecond = isValid(calcSecEnc, calculatorSecondInput);
 
+    if (tabWidget->currentIndex() == 1) {
+        if (step != 0) {
+            encoderInputField->setStyleSheet("background-color: green;");
+            encoderOutputField->setText(encode(encoding, outputEncoding, inputText, step));
+        } else {
+            encoderInputField->setStyleSheet("background-color: red;");
+            displayLabel->setText("Invalid input for " + encodingTypeDropdown->currentText());
+        }
+        return;
+    }
 
-    if (step != 0) {
-        textField->setStyleSheet("background-color: green;");
-        outputField->setText(encode(encoding, outputEncoding, inputText,step));
-    } else {
-        textField->setStyleSheet("background-color: red;");
-        displayLabel->setText("Invalid input for " + encodingTypeDropdown->currentText());
+    // Calculator Tab Validation
+    if (tabWidget->currentIndex() == 2) {
+        // Validate first calculator input field
+        if (stepCalcFirst != 0) {
+            calculatorFirstInputField->setStyleSheet("background-color: green;");
+        } else {
+            calculatorFirstInputField->setStyleSheet("background-color: red;");
+        }
+
+        // Validate second calculator input field
+        if (stepCalcSecond != 0) {
+            calculatorSecondInputField->setStyleSheet("background-color: green;");
+        } else {
+            calculatorSecondInputField->setStyleSheet("background-color: red;");
+        }
+
     }
 }
 void MyWindow::onTabChanged(int index) {
