@@ -16,6 +16,7 @@ MyWindow::MyWindow(QWidget *parent)
     setupEncodingTab();
     setLayout(mainLayout);
     setupCalculatorTab();
+    setupStringTab();
     this->setFixedSize(this->size());
 
     connect(encoderInputField, &QLineEdit::textChanged, this, &MyWindow::handleInput);
@@ -67,27 +68,25 @@ void MyWindow::setupHomeTab(){
     tabWidget->addTab(homeTab, "Home");
 }
 
+//Constructor for the dropdowns, usually the same so a waste to repeat self.
+QComboBox* MyWindow::makeDropdown(){
+    QComboBox *temp = new QComboBox(this);
+    temp->addItem("Binary");
+    temp->addItem("Decimal");
+    temp->addItem("Hex");
+    temp->addItem("ASCII");
+    return temp;
+}
+
 void MyWindow::setupCalculatorTab(){
     calculatorTab = new QWidget(this);
     QVBoxLayout *calculatorLayout = new QVBoxLayout(calculatorTab);
 
-    calculatorFirstInputDropdown = new QComboBox(this);
-    calculatorFirstInputDropdown->addItem("Binary");
-    calculatorFirstInputDropdown->addItem("Decimal");
-    calculatorFirstInputDropdown->addItem("Hex");
-    calculatorFirstInputDropdown->addItem("ASCII");
+    calculatorFirstInputDropdown = makeDropdown();
 
-    calculatorSecondInputDropdown = new QComboBox(this);
-    calculatorSecondInputDropdown->addItem("Binary");
-    calculatorSecondInputDropdown->addItem("Decimal");
-    calculatorSecondInputDropdown->addItem("Hex");
-    calculatorSecondInputDropdown->addItem("ASCII");
+    calculatorSecondInputDropdown = makeDropdown();
 
-    calculatorOutputEncoding = new QComboBox(this);
-    calculatorOutputEncoding->addItem("Binary");
-    calculatorOutputEncoding->addItem("Decimal");
-    calculatorOutputEncoding->addItem("Hex");
-    calculatorOutputEncoding->addItem("ASCII");
+    calculatorOutputEncoding = makeDropdown();
 
     calculatorFirstInputField = new QLineEdit(this);
     calculatorFirstInputField->setPlaceholderText("Value...");
@@ -129,6 +128,54 @@ void MyWindow::setupCalculatorTab(){
     connect(calculatorFirstInputField, &QLineEdit::textChanged, this, &MyWindow::handleInput);
     connect(calculatorSecondInputField, &QLineEdit::textChanged, this, &MyWindow::handleInput);
 
+
+
+}
+
+void MyWindow::setupStringTab(){
+    stringTab =              new QWidget(this);
+    QVBoxLayout *layout =    new QVBoxLayout(stringTab);
+    stringInput =            new QLineEdit(this);
+    stringOutput =           new QLineEdit(this);
+    stringCharacterCounter = new QLineEdit(this);
+    stringCharacterType =    new QLineEdit(this);
+
+    stringOperationDropdown = new QComboBox(this);
+
+    QPushButton *operateButton = new QPushButton("=", this);
+
+    stringInput->setPlaceholderText("Input...");
+    stringOutput->setPlaceholderText("Output...");
+    stringCharacterCounter->setPlaceholderText("Every x appearances...");
+    stringCharacterType->setPlaceholderText("Character...");
+
+    stringCharacterType->setMaxLength(1);
+    stringCharacterCounter->setMaxLength(2);
+    QIntValidator *intValidator = new QIntValidator(0, 99, stringInput);
+    stringCharacterCounter->setValidator(intValidator);
+
+    int lineHeight = stringInput->fontMetrics().height();
+    stringInput->setMinimumHeight(2 * lineHeight + 10);
+    stringOutput->setMinimumHeight(2 * lineHeight + 10);
+
+
+    stringOperationDropdown->addItem("Append");
+    stringOperationDropdown->addItem("Subtract");
+
+    QHBoxLayout *operationLayout = new QHBoxLayout();
+    operationLayout->addWidget(stringOperationDropdown);
+    operationLayout->addWidget(stringCharacterType);
+    operationLayout->addWidget(stringCharacterCounter);
+
+    operationLayout->addWidget(operateButton);
+
+
+    layout->addWidget(stringInput);
+    layout->addLayout(operationLayout);
+    layout->addWidget(stringOutput);
+
+    stringTab->setLayout(layout);
+    tabWidget->addTab(stringTab, "String Operations");
 
 
 }
@@ -188,11 +235,7 @@ void MyWindow::setupEncodingTab() {
     encodingLayout->addLayout(gridLayout); // Add grid layout to encodingLayout
 
     // Left section controls
-    encodingTypeDropdown = new QComboBox(this);
-    encodingTypeDropdown->addItem("Binary");
-    encodingTypeDropdown->addItem("Decimal");
-    encodingTypeDropdown->addItem("Hex");
-    encodingTypeDropdown->addItem("ASCII");
+    encodingTypeDropdown = makeDropdown();
 
     encoderInputField = new QLineEdit(this);
     encoderInputField->setPlaceholderText("Input value...");
@@ -205,11 +248,7 @@ void MyWindow::setupEncodingTab() {
     gridLayout->addWidget(displayLabel, 2, 0);
 
     // Right section controls
-    outputEncodingDropdown = new QComboBox(this);
-    outputEncodingDropdown->addItem("Binary");
-    outputEncodingDropdown->addItem("Decimal");
-    outputEncodingDropdown->addItem("Hex");
-    outputEncodingDropdown->addItem("ASCII");
+    outputEncodingDropdown = makeDropdown();
 
     encoderOutputField = new QLineEdit(this);
     encoderOutputField->setPlaceholderText("Output value...");
@@ -226,7 +265,7 @@ void MyWindow::setupEncodingTab() {
     connect(outputEncodingDropdown, &QComboBox::currentIndexChanged, this, &MyWindow::handleDropdownChange);
 }
 
-
+//Could not find a better way to do this, sorry :)
 void MyWindow::handleInput()
 {
 
@@ -254,9 +293,11 @@ void MyWindow::handleInput()
     int stepCalcFirst = isValid(calcFirstEnc, calculatorFirstInput);
     int stepCalcSecond = isValid(calcSecEnc, calculatorSecondInput);
 
+    //Encoding Tab Validation.
     if (tabWidget->currentIndex() == 1) {
         if (step != 0) {
             encoderInputField->setStyleSheet("background-color: green;");
+            qDebug() << outputEncoding;
             encoderOutputField->setText(encode(encoding, outputEncoding, inputText, step));
         } else {
             encoderInputField->setStyleSheet("background-color: red;");

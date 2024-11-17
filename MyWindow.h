@@ -20,6 +20,7 @@ private slots:
     void handleInput();                   // Declare the slot
     void onTabChanged(int index);
     void performCalculation();
+    QComboBox* makeDropdown();
 
 private:
     QLineEdit *encoderInputField;
@@ -27,6 +28,11 @@ private:
     QLineEdit *calculatorFirstInputField;
     QLineEdit *calculatorSecondInputField;
     QLineEdit *calculatorOutput;
+    QLineEdit *stringInput;
+    QLineEdit *stringOutput;
+    QLineEdit *stringCharacterType;
+    QLineEdit *stringCharacterCounter;
+
 
     QLabel *displayLabel;
 
@@ -36,6 +42,7 @@ private:
     QComboBox *calculatorSecondInputDropdown;
     QComboBox *operationDropdown;
     QComboBox *calculatorOutputEncoding;
+    QComboBox *stringOperationDropdown;
 
     QTabWidget *tabWidget;
 
@@ -44,12 +51,14 @@ private:
     QWidget *calculatorTab;
     QWidget *notesTab;
     QWidget *cheatSheetTab;
+    QWidget *stringTab;
 
     void setupHomeTab();
     void setupEncodingTab();
     void setupCalculatorTab();
     void setupNotesTab();
     void setupCheatSheetTab();
+    void setupStringTab();
 
 
 };

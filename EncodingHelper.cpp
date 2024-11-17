@@ -3,7 +3,7 @@
 #include <QMessageBox>
 #include "EncodingType.h"
 
-
+//Takes in the index of a dropdown menu and returns the EncodingType value.
 EncodingType getEncodingType(int dropdownSelection)
 {
     switch (dropdownSelection) {
@@ -16,13 +16,13 @@ EncodingType getEncodingType(int dropdownSelection)
     case 3:
         return ASCII;
     default:
-        popup("Invalid Encoding type, I don't know how you did this, congratulations!!!");                   // Show the message box
+        popup("Invalid Encoding type, I don't know how you did this, congratulations!!!");
         return NONE;
     }
 }
 
 
-
+// Wrapper for the Qt QMessageBox object.
 void popup(QString message){
     QMessageBox msgBox;
     msgBox.setIcon(QMessageBox::Critical);                   // Set the icon to critical
@@ -34,9 +34,10 @@ void popup(QString message){
 
 
 
-
+//Take a hex string and return the decimal representation.
 long int hexToDecimal(QString data){
     int length = data.length();
+    //To upper to not have to handle both capital and lowercase characters
     data = data.toUpper();
 
     int power = 0;
@@ -62,7 +63,8 @@ long int hexToDecimal(QString data){
 }
 
 
-
+//Check if the length of a value is divisible by a certain step size. Used for value evaluation when getting input.
+//Example. Binary values should be divisible by 8
 bool checkLength(int length, int modVal, int baseCase){
     if (baseCase == 0) baseCase = length;
     if (length % modVal != 0 && length != baseCase) {
@@ -72,7 +74,7 @@ bool checkLength(int length, int modVal, int baseCase){
     return true;
 }
 
-
+//Translate the binary representation of a value to decimal.
 long int binaryToDecimal(QString data)
 {
     int length = data.length();
@@ -94,6 +96,8 @@ long int binaryToDecimal(QString data)
     return sum;
 }
 
+//Handler for translations of a certain encoding type to decimal.Translate to decimal to not have to handle each combination of encodings manually.
+//Instead of (n)*(n-1) combinations there are 2(n).
 long int encodingToDecimal(EncodingType encoding, QString data)
 {
     switch (encoding) {
@@ -109,6 +113,9 @@ long int encodingToDecimal(EncodingType encoding, QString data)
 }
 
 
+
+//Handles input evaluation. Checks encoding type and ensures that the length of the input is able to be handled by the translation function.
+//Returns the step count, which works as both an int value and a boolean value for the calling functions.
 int isValid(EncodingType encoding, QString data){
     bool isValid = false;
     int step = 0;
@@ -132,7 +139,8 @@ int isValid(EncodingType encoding, QString data){
         }
         break;
     case DECIMAL:
-
+        //Need to use a temp variable because it alters the value stored inside the variable.
+        //Should not remove the spaces in the original variable because it could affect the ascii results, where applicable
         isValid = temp.remove(" ").toInt();
         if(isValid) {
             step = 1;
@@ -153,6 +161,8 @@ int isValid(EncodingType encoding, QString data){
     return step;
 }
 
+
+//Decimal to binary translation. Quite basic
 QString decimalToBinary(long int value){
 
     QString output;
@@ -171,6 +181,7 @@ QString decimalToBinary(long int value){
     return output;
 }
 
+//Decimal to hex translation.
 QString decimalToHex(long int value){
 
     QString output;
@@ -178,8 +189,9 @@ QString decimalToHex(long int value){
     while (value != 0){
         int remainder = value % base;
         char character;
+        //If starting with the Alphabetic representation
         if (remainder > 9){
-
+            //Moves to just before the start of the capital alphabetic characters in ascii allow for iteration over them, since F is the maximum reachable value
             character = remainder + 55;
         }else {
             character = remainder + 48;
@@ -191,6 +203,7 @@ QString decimalToHex(long int value){
 
 }
 
+
 QString decimalToEncoding(EncodingType endEncoding, long int value){
     if (endEncoding == HEX){return decimalToHex(value);}
     if (endEncoding == BINARY){return decimalToBinary(value);}
@@ -198,6 +211,8 @@ QString decimalToEncoding(EncodingType endEncoding, long int value){
     return "0";
 }
 
+
+// Use the starting and ending representation to handle all of the translations. Only this needs to be called
 QString encode(EncodingType startEncoding, EncodingType endEncoding, QString data, int step){
     if (startEncoding == BINARY || startEncoding == HEX) {
         if (endEncoding == ASCII){
@@ -213,7 +228,8 @@ QString encode(EncodingType startEncoding, EncodingType endEncoding, QString dat
         }
         else{
             long int result = encodingToDecimal(startEncoding, data);
-            return QString::number(result);
+            return decimalToEncoding(endEncoding, result);
+
 
         }
     }
@@ -229,11 +245,10 @@ QString encode(EncodingType startEncoding, EncodingType endEncoding, QString dat
         return resultString;
 
     }
-    int decimalData = encodingToDecimal(startEncoding, data);
+    long int decimalData = encodingToDecimal(startEncoding, data);
+
+
     return decimalToEncoding(endEncoding, decimalData);
-
-
-
 }
 
 
