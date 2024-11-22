@@ -5,6 +5,8 @@ Haprocrates_autogen/timestamp: \
 	/home/dimi/Harpocrates/EncodingType.h \
 	/home/dimi/Harpocrates/MyWindow.cpp \
 	/home/dimi/Harpocrates/MyWindow.h \
+	/home/dimi/Harpocrates/StringHelper.cpp \
+	/home/dimi/Harpocrates/StringHelper.h \
 	/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/.qtc/package-manager/auto-setup.cmake \
 	/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake \
 	/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/CMakeFiles/3.22.1/CMakeSystem.cmake \

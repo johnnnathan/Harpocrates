@@ -393,6 +393,12 @@
 			"MU",
 			"EWIEGA46WW/moc_MyWindow.cpp",
 			null
+		],
+		[
+			"/home/dimi/Harpocrates/StringHelper.h",
+			"MU",
+			"EWIEGA46WW/moc_StringHelper.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -455,6 +461,7 @@
 	[
 		[ "/home/dimi/Harpocrates/EncodingHelper.cpp", "MU", null ],
 		[ "/home/dimi/Harpocrates/MyWindow.cpp", "MU", null ],
+		[ "/home/dimi/Harpocrates/StringHelper.cpp", "MU", null ],
 		[ "/home/dimi/Harpocrates/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

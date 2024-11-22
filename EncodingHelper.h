@@ -18,5 +18,5 @@ int isValid(EncodingType encoding, QString data);
 QString encode(EncodingType startEncoding, EncodingType endEncoding, QString data, int step);
 QString decimalToBinary(long int value);
 QString decimalToHex(long int value);
-
+long int asciiToDecimal(QString value);
 #endif // ENCODINGHELPER_H

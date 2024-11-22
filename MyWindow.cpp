@@ -288,10 +288,14 @@ void MyWindow::handleInput()
         calcSecEnc = getEncodingType(calculatorSecondInputDropdown->currentIndex());
 
     }
+    QString temp = inputText;
+    temp = temp.replace(" " , "");
+    QString tempCalcFirst = calculatorFirstInput;
+    QString tempCalcSecond = calculatorSecondInput;
 
-    int step = isValid(encoding, inputText);
-    int stepCalcFirst = isValid(calcFirstEnc, calculatorFirstInput);
-    int stepCalcSecond = isValid(calcSecEnc, calculatorSecondInput);
+    int step = isValid(encoding, temp.trimmed());
+    int stepCalcFirst = isValid(calcFirstEnc, tempCalcFirst.trimmed());
+    int stepCalcSecond = isValid(calcSecEnc, tempCalcSecond.trimmed());
 
     //Encoding Tab Validation.
     if (tabWidget->currentIndex() == 1) {

@@ -202,6 +202,17 @@ QString decimalToHex(long int value){
     return output;
 
 }
+long int asciiToDecimal(QString value){
+    QString result;
+
+    for (int i = 0; i < value.length(); i++){
+        result.append(QString::number(value[i].toLatin1()));
+
+    }
+
+    return result.toLong();
+
+}
 
 
 QString decimalToEncoding(EncodingType endEncoding, long int value){
@@ -219,9 +230,10 @@ QString encode(EncodingType startEncoding, EncodingType endEncoding, QString dat
             QString resultString;
             for (int byte = 0; byte < data.length(); byte += step){
                 QString chunk = data.mid(byte, step); // Get subset
-
+                qDebug() << chunk;
                 long int decimalValue = encodingToDecimal(startEncoding, chunk);
                 resultString.append(static_cast<char>(decimalValue)); // Convert to ASCII character
+                byte++;
             }
             return(resultString);
 
@@ -232,6 +244,9 @@ QString encode(EncodingType startEncoding, EncodingType endEncoding, QString dat
 
 
         }
+    }
+    if (startEncoding == ASCII){
+        return decimalToEncoding(endEncoding, asciiToDecimal(data));
     }
     if (startEncoding == DECIMAL && endEncoding == ASCII){
 
@@ -250,6 +265,5 @@ QString encode(EncodingType startEncoding, EncodingType endEncoding, QString dat
 
     return decimalToEncoding(endEncoding, decimalData);
 }
-
 
 

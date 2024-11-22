@@ -29,6 +29,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         EncodingHelper.h
         EncodingHelper.cpp
         resources.qrc
+        StringHelper.cpp
+        StringHelper.h
 
 
 

@@ -81,6 +81,14 @@ build CMakeFiles/Haprocrates.dir/EncodingHelper.cpp.o: CXX_COMPILER__Haprocrates
   OBJECT_DIR = CMakeFiles/Haprocrates.dir
   OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir
 
+build CMakeFiles/Haprocrates.dir/StringHelper.cpp.o: CXX_COMPILER__Haprocrates_Debug /home/dimi/Harpocrates/StringHelper.cpp || cmake_object_order_depends_target_Haprocrates
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Haprocrates.dir/StringHelper.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -fPIC -std=gnu++17
+  INCLUDES = -I/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/include -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtCore -isystem /home/dimi/Qt/6.8.0/gcc_64/include -isystem /home/dimi/Qt/6.8.0/gcc_64/mkspecs/linux-g++ -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtWidgets -isystem /home/dimi/Qt/6.8.0/gcc_64/include/QtGui
+  OBJECT_DIR = CMakeFiles/Haprocrates.dir
+  OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir
+
 build CMakeFiles/Haprocrates.dir/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cpp.o: CXX_COMPILER__Haprocrates_Debug /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cpp || cmake_object_order_depends_target_Haprocrates
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/Haprocrates.dir/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cpp.o.d
@@ -97,7 +105,7 @@ build CMakeFiles/Haprocrates.dir/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cp
 #############################################
 # Link the executable Haprocrates
 
-build Haprocrates: CXX_EXECUTABLE_LINKER__Haprocrates_Debug CMakeFiles/Haprocrates.dir/Haprocrates_autogen/mocs_compilation.cpp.o CMakeFiles/Haprocrates.dir/main.cpp.o CMakeFiles/Haprocrates.dir/MyWindow.cpp.o CMakeFiles/Haprocrates.dir/EncodingHelper.cpp.o CMakeFiles/Haprocrates.dir/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cpp.o | /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Widgets.so.6.8.0 /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Gui.so.6.8.0 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Core.so.6.8.0 || Haprocrates_autogen Haprocrates_autogen_timestamp_deps
+build Haprocrates: CXX_EXECUTABLE_LINKER__Haprocrates_Debug CMakeFiles/Haprocrates.dir/Haprocrates_autogen/mocs_compilation.cpp.o CMakeFiles/Haprocrates.dir/main.cpp.o CMakeFiles/Haprocrates.dir/MyWindow.cpp.o CMakeFiles/Haprocrates.dir/EncodingHelper.cpp.o CMakeFiles/Haprocrates.dir/StringHelper.cpp.o CMakeFiles/Haprocrates.dir/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cpp.o | /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Widgets.so.6.8.0 /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Gui.so.6.8.0 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Core.so.6.8.0 || Haprocrates_autogen Haprocrates_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = -Wl,-rpath,/home/dimi/Qt/6.8.0/gcc_64/lib:  /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Widgets.so.6.8.0  /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Gui.so.6.8.0  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Core.so.6.8.0  -Wl,-rpath-link,/home/dimi/Qt/6.8.0/gcc_64/lib
   OBJECT_DIR = CMakeFiles/Haprocrates.dir
@@ -206,7 +214,7 @@ build Haprocrates_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}H
 #############################################
 # Phony custom command for CMakeFiles/Haprocrates_autogen_timestamp_deps
 
-build CMakeFiles/Haprocrates_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Haprocrates_autogen_timestamp_deps: phony /home/dimi/Qt/6.8.0/gcc_64/libexec/moc /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Widgets.so.6.8.0 /home/dimi/Qt/6.8.0/gcc_64/libexec/uic /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Core.so.6.8.0
+build CMakeFiles/Haprocrates_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Haprocrates_autogen_timestamp_deps: phony /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Core.so.6.8.0 /home/dimi/Qt/6.8.0/gcc_64/libexec/uic /home/dimi/Qt/6.8.0/gcc_64/libexec/moc /home/dimi/Qt/6.8.0/gcc_64/lib/libQt6Widgets.so.6.8.0
 
 
 #############################################

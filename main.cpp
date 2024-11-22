@@ -1,7 +1,7 @@
 #include <QApplication>
 #include "MyWindow.h"
 
-int main(int argc, char *argv[])
+/*int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     MyWindow window;
@@ -9,3 +9,4 @@ int main(int argc, char *argv[])
     window.show();
     return app.exec();
 }
+*/
