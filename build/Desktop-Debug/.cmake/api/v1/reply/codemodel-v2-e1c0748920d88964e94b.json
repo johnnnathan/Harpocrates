@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-b73890466fc4eef2745c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Haprocrates",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Haprocrates::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Haprocrates-Debug-6a392b2a83d17672a3bf.json",
+					"name" : "Haprocrates",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Haprocrates_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Haprocrates_autogen-Debug-db2578321e2ace0191dd.json",
+					"name" : "Haprocrates_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Haprocrates_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Haprocrates_autogen_timestamp_deps-Debug-75754fa9d6af5ea6c6a6.json",
+					"name" : "Haprocrates_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug",
+		"source" : "/home/dimi/Desktop/Projects/Harpocrates"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
