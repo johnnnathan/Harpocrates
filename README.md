@@ -10,7 +10,7 @@
 - **Calculator - 99% Done** <br>
   Calculate the result of the basic mathematical operations (+,-,*,/,%) and translate it into any encoding.
   
-- **String Operations - 0% Done** <br>
+- **String Operations - 50% Done** <br>
   Tools for encoding, decoding, and manipulating strings.
 
 - **Notes Tab - 0% Done** <br>
