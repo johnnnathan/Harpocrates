@@ -3,7 +3,7 @@
 
 #include <QString>
 
-QString addChar(QString value, QString pattern, int each);
+QString addPattern(QString value, QString pattern, int each);
 QString removePattern(QString value, QString pattern, int each);
 QString removeEach(QString value, int each);
 QString removePosition(QString value, int position);

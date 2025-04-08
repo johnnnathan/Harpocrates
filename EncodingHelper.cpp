@@ -6,6 +6,7 @@
 //Takes in the index of a dropdown menu and returns the EncodingType value.
 EncodingType getEncodingType(int dropdownSelection)
 {
+
     switch (dropdownSelection) {
     case 0:
         return BINARY;
@@ -15,6 +16,8 @@ EncodingType getEncodingType(int dropdownSelection)
         return HEX;
     case 3:
         return ASCII;
+    case 4:
+        return AUTO;
     default:
         popup("Invalid Encoding type, I don't know how you did this, congratulations!!!");
         return NONE;
@@ -112,12 +115,35 @@ long int encodingToDecimal(EncodingType encoding, QString data)
     return 0;
 }
 
+EncodingType getEncoding(QString data){
+    bool valid= false;
+    int step = 0;
+    QString temp = data;
+    QRegularExpression hexRegex("^[0-9A-F]*$");
+    EncodingType result;
+
+
+    if (temp.count('0') + temp.count('1') == temp.length()){
+        return BINARY;
+    }
+    else if (temp.remove(" ").toInt()){
+        return DECIMAL;
+    }
+    else if(temp.contains(hexRegex)){ // Check for valid hex characters)
+        return HEX;
+    }
+    else if (!temp.isEmpty()){
+        return ASCII;
+    }
+
+    step;
+}
 
 
 //Handles input evaluation. Checks encoding type and ensures that the length of the input is able to be handled by the translation function.
 //Returns the step count, which works as both an int value and a boolean value for the calling functions.
 int isValid(EncodingType encoding, QString data){
-    bool isValid = false;
+    bool valid= false;
     int step = 0;
     QString temp = data;
     QRegularExpression hexRegex("^[0-9A-F]*$");
@@ -125,31 +151,30 @@ int isValid(EncodingType encoding, QString data){
     switch (encoding) {
     case BINARY:
 
-        isValid = (temp.length() % 8 == 0)
-                  && (temp.count('0') + temp.count('1') == temp.length());
-        if (isValid){
+        valid = (temp.count('0') + temp.count('1') == temp.length());
+        if (valid){
             step = 8;
         }
         break;
     case HEX:
 
-        isValid =  temp.contains(hexRegex); // Check for valid hex characters
-        if (isValid){
+        valid =  temp.contains(hexRegex); // Check for valid hex characters
+        if (valid){
             step = 2;
         }
         break;
     case DECIMAL:
         //Need to use a temp variable because it alters the value stored inside the variable.
         //Should not remove the spaces in the original variable because it could affect the ascii results, where applicable
-        isValid = temp.remove(" ").toInt();
-        if(isValid) {
+        valid = temp.remove(" ").toInt();
+        if(valid) {
             step = 1;
         }
         break;
     case ASCII:
 
-        isValid = !temp.isEmpty();
-        if (isValid) {
+        valid = !temp.isEmpty();
+        if (valid) {
             step =  1;
         }
         break;

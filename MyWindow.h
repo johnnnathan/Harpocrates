@@ -17,9 +17,10 @@ public:
     MyWindow(QWidget *parent = nullptr);
 private slots:
     void handleDropdownChange(int index); // Slot for dropdown changes
-    void handleInput();                   // Declare the slot
+    void handleCalcInput();                   // Declare the slot
     void onTabChanged(int index);
     void performCalculation();
+    void performStringOperation();
     QComboBox* makeDropdown();
 
 private:

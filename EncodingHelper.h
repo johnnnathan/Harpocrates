@@ -19,4 +19,5 @@ QString encode(EncodingType startEncoding, EncodingType endEncoding, QString dat
 QString decimalToBinary(long int value);
 QString decimalToHex(long int value);
 long int asciiToDecimal(QString value);
+EncodingType getEncoding(QString data);
 #endif // ENCODINGHELPER_H

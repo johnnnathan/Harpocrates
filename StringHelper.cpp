@@ -3,7 +3,7 @@
 #include <QRegularExpression>
 
 
-QString addChar(QString value, QString pattern,  int each){
+QString addPattern(QString value, QString pattern,  int each){
     QString result;
 
     for (int i = 0; i < value.length() ; i++){

@@ -6,6 +6,7 @@ enum EncodingType {
     DECIMAL,
     HEX,
     ASCII,
+    AUTO,
     NONE,
 };
 

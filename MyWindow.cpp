@@ -2,6 +2,7 @@
 #include <QVBoxLayout>
 #include "EncodingHelper.h"
 #include "EncodingType.h"
+#include "StringHelper.h"
 #include <QPushButton>
 
 MyWindow::MyWindow(QWidget *parent)
@@ -19,7 +20,7 @@ MyWindow::MyWindow(QWidget *parent)
     setupStringTab();
     this->setFixedSize(this->size());
 
-    connect(encoderInputField, &QLineEdit::textChanged, this, &MyWindow::handleInput);
+    connect(encoderInputField, &QLineEdit::textChanged, this, &MyWindow::handleCalcInput);
     connect(encodingTypeDropdown, &QComboBox::currentIndexChanged, this, &MyWindow::handleDropdownChange);
     connect(tabWidget, &QTabWidget::currentChanged, this, &MyWindow::onTabChanged);
 }
@@ -75,6 +76,7 @@ QComboBox* MyWindow::makeDropdown(){
     temp->addItem("Decimal");
     temp->addItem("Hex");
     temp->addItem("ASCII");
+    temp->addItem("AUTO");
     return temp;
 }
 
@@ -83,10 +85,13 @@ void MyWindow::setupCalculatorTab(){
     QVBoxLayout *calculatorLayout = new QVBoxLayout(calculatorTab);
 
     calculatorFirstInputDropdown = makeDropdown();
-
     calculatorSecondInputDropdown = makeDropdown();
 
     calculatorOutputEncoding = makeDropdown();
+    calculatorOutputEncoding->removeItem(4);
+
+    calculatorFirstInputDropdown->setCurrentIndex(4);
+    calculatorSecondInputDropdown->setCurrentIndex(4);
 
     calculatorFirstInputField = new QLineEdit(this);
     calculatorFirstInputField->setPlaceholderText("Value...");
@@ -125,8 +130,8 @@ void MyWindow::setupCalculatorTab(){
     tabWidget->addTab(calculatorTab, "Calculator");
 
     connect(calculateButton, &QPushButton::clicked, this, &MyWindow::performCalculation);
-    connect(calculatorFirstInputField, &QLineEdit::textChanged, this, &MyWindow::handleInput);
-    connect(calculatorSecondInputField, &QLineEdit::textChanged, this, &MyWindow::handleInput);
+    connect(calculatorFirstInputField, &QLineEdit::textChanged, this, &MyWindow::handleCalcInput);
+    connect(calculatorSecondInputField, &QLineEdit::textChanged, this, &MyWindow::handleCalcInput);
 
 
 
@@ -149,10 +154,6 @@ void MyWindow::setupStringTab(){
     stringCharacterCounter->setPlaceholderText("Every x appearances...");
     stringCharacterType->setPlaceholderText("Character...");
 
-    stringCharacterType->setMaxLength(1);
-    stringCharacterCounter->setMaxLength(2);
-    QIntValidator *intValidator = new QIntValidator(0, 99, stringInput);
-    stringCharacterCounter->setValidator(intValidator);
 
     int lineHeight = stringInput->fontMetrics().height();
     stringInput->setMinimumHeight(2 * lineHeight + 10);
@@ -176,9 +177,39 @@ void MyWindow::setupStringTab(){
 
     stringTab->setLayout(layout);
     tabWidget->addTab(stringTab, "String Operations");
+    connect(operateButton, &QPushButton::clicked, this, &MyWindow::performStringOperation);
+
 
 
 }
+
+void MyWindow::performStringOperation(){
+    QString input = stringInput->text();
+    QString output;
+    int characterCounter = stringCharacterCounter->text().toInt();
+    QString characterType = stringCharacterType->text();
+    int operation = stringOperationDropdown->currentIndex();
+    int length = input.length();
+    switch (operation) {
+    case 0:
+        output = addPattern(input, characterType, characterCounter);
+        break;
+    case 1:
+        switch (length) {
+        case 0:
+            output = removePosition(input, characterCounter);
+            break;
+        default:
+            output = removePattern(input, characterType, characterCounter);
+            break;
+        }
+        break;
+    default:
+        break;
+    }
+    stringOutput->setText(output);
+}
+
 void MyWindow::setupNotesTab(){}
 void MyWindow::setupCheatSheetTab(){}
 
@@ -190,6 +221,13 @@ void MyWindow::performCalculation() {
     EncodingType firstInputEncoding = getEncodingType(calculatorFirstInputDropdown->currentIndex());
     EncodingType secondInputEncoding = getEncodingType(calculatorSecondInputDropdown->currentIndex());
 
+
+    if (firstInputEncoding == AUTO){
+        firstInputEncoding = getEncoding(secondInputText);
+    }
+    if (secondInputEncoding == AUTO){
+        secondInputEncoding = getEncoding(firstInputText);
+    }
     int operation = operationDropdown->currentIndex();
 
     long int first = encodingToDecimal(firstInputEncoding, firstInputText);
@@ -222,6 +260,9 @@ void MyWindow::performCalculation() {
 
     // Display the result in output field
     calculatorOutput->setText(decimalToEncoding(getEncodingType(calculatorOutputEncoding->currentIndex()), result));
+    calculatorFirstInputField->setText(calculatorOutput->text());
+    calculatorSecondInputField->clear();
+    handleCalcInput();
 }
 
 
@@ -236,6 +277,7 @@ void MyWindow::setupEncodingTab() {
 
     // Left section controls
     encodingTypeDropdown = makeDropdown();
+    encodingTypeDropdown->setCurrentIndex(4);
 
     encoderInputField = new QLineEdit(this);
     encoderInputField->setPlaceholderText("Input value...");
@@ -266,7 +308,7 @@ void MyWindow::setupEncodingTab() {
 }
 
 //Could not find a better way to do this, sorry :)
-void MyWindow::handleInput()
+void MyWindow::handleCalcInput()
 {
 
     QString inputText = encoderInputField->text().toUpper();
@@ -292,6 +334,17 @@ void MyWindow::handleInput()
     temp = temp.replace(" " , "");
     QString tempCalcFirst = calculatorFirstInput;
     QString tempCalcSecond = calculatorSecondInput;
+
+
+    if (encoding == AUTO){
+        encoding = getEncoding(temp);
+    }
+    if (calcFirstEnc == AUTO){
+        calcFirstEnc = getEncoding(calculatorFirstInput);
+    }
+    if (calcSecEnc == AUTO){
+        calcSecEnc = getEncoding(calculatorSecondInput);
+    }
 
     int step = isValid(encoding, temp.trimmed());
     int stepCalcFirst = isValid(calcFirstEnc, tempCalcFirst.trimmed());
@@ -340,7 +393,7 @@ void MyWindow::onTabChanged(int index) {
 }
 void MyWindow::handleDropdownChange(int index)
 {
-    handleInput();
+    handleCalcInput();
 }
 
 
