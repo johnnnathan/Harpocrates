@@ -1,12 +1,22 @@
 Haprocrates_autogen/timestamp: \
 	/home/dimi/Desktop/Projects/Harpocrates/CMakeLists.txt \
+	/home/dimi/Desktop/Projects/Harpocrates/CalculatorTab.cpp \
+	/home/dimi/Desktop/Projects/Harpocrates/CalculatorTab.h \
 	/home/dimi/Desktop/Projects/Harpocrates/EncodingHelper.cpp \
 	/home/dimi/Desktop/Projects/Harpocrates/EncodingHelper.h \
+	/home/dimi/Desktop/Projects/Harpocrates/EncodingTab.cpp \
+	/home/dimi/Desktop/Projects/Harpocrates/EncodingTab.h \
 	/home/dimi/Desktop/Projects/Harpocrates/EncodingType.h \
+	/home/dimi/Desktop/Projects/Harpocrates/HomeTab.cpp \
+	/home/dimi/Desktop/Projects/Harpocrates/HomeTab.h \
 	/home/dimi/Desktop/Projects/Harpocrates/MyWindow.cpp \
 	/home/dimi/Desktop/Projects/Harpocrates/MyWindow.h \
 	/home/dimi/Desktop/Projects/Harpocrates/StringHelper.cpp \
 	/home/dimi/Desktop/Projects/Harpocrates/StringHelper.h \
+	/home/dimi/Desktop/Projects/Harpocrates/StringsTab.cpp \
+	/home/dimi/Desktop/Projects/Harpocrates/StringsTab.h \
+	/home/dimi/Desktop/Projects/Harpocrates/TabHelper.cpp \
+	/home/dimi/Desktop/Projects/Harpocrates/TabHelper.h \
 	/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/.qtc/package-manager/auto-setup.cmake \
 	/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \

@@ -89,6 +89,46 @@ build CMakeFiles/Haprocrates.dir/StringHelper.cpp.o: CXX_COMPILER__Haprocrates_u
   OBJECT_DIR = CMakeFiles/Haprocrates.dir
   OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir
 
+build CMakeFiles/Haprocrates.dir/CalculatorTab.cpp.o: CXX_COMPILER__Haprocrates_unscanned_Debug /home/dimi/Desktop/Projects/Harpocrates/CalculatorTab.cpp || cmake_object_order_depends_target_Haprocrates
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Haprocrates.dir/CalculatorTab.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/Haprocrates_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/Haprocrates.dir
+  OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir
+
+build CMakeFiles/Haprocrates.dir/EncodingTab.cpp.o: CXX_COMPILER__Haprocrates_unscanned_Debug /home/dimi/Desktop/Projects/Harpocrates/EncodingTab.cpp || cmake_object_order_depends_target_Haprocrates
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Haprocrates.dir/EncodingTab.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/Haprocrates_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/Haprocrates.dir
+  OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir
+
+build CMakeFiles/Haprocrates.dir/HomeTab.cpp.o: CXX_COMPILER__Haprocrates_unscanned_Debug /home/dimi/Desktop/Projects/Harpocrates/HomeTab.cpp || cmake_object_order_depends_target_Haprocrates
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Haprocrates.dir/HomeTab.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/Haprocrates_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/Haprocrates.dir
+  OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir
+
+build CMakeFiles/Haprocrates.dir/StringsTab.cpp.o: CXX_COMPILER__Haprocrates_unscanned_Debug /home/dimi/Desktop/Projects/Harpocrates/StringsTab.cpp || cmake_object_order_depends_target_Haprocrates
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Haprocrates.dir/StringsTab.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/Haprocrates_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/Haprocrates.dir
+  OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir
+
+build CMakeFiles/Haprocrates.dir/TabHelper.cpp.o: CXX_COMPILER__Haprocrates_unscanned_Debug /home/dimi/Desktop/Projects/Harpocrates/TabHelper.cpp || cmake_object_order_depends_target_Haprocrates
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Haprocrates.dir/TabHelper.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/Haprocrates_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/Haprocrates.dir
+  OBJECT_FILE_DIR = CMakeFiles/Haprocrates.dir
+
 build CMakeFiles/Haprocrates.dir/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cpp.o: CXX_COMPILER__Haprocrates_unscanned_Debug /home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cpp || cmake_object_order_depends_target_Haprocrates
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/Haprocrates.dir/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cpp.o.d
@@ -105,7 +145,7 @@ build CMakeFiles/Haprocrates.dir/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cp
 #############################################
 # Link the executable Haprocrates
 
-build Haprocrates: CXX_EXECUTABLE_LINKER__Haprocrates_Debug CMakeFiles/Haprocrates.dir/Haprocrates_autogen/mocs_compilation.cpp.o CMakeFiles/Haprocrates.dir/main.cpp.o CMakeFiles/Haprocrates.dir/MyWindow.cpp.o CMakeFiles/Haprocrates.dir/EncodingHelper.cpp.o CMakeFiles/Haprocrates.dir/StringHelper.cpp.o CMakeFiles/Haprocrates.dir/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || Haprocrates_autogen Haprocrates_autogen_timestamp_deps
+build Haprocrates: CXX_EXECUTABLE_LINKER__Haprocrates_Debug CMakeFiles/Haprocrates.dir/Haprocrates_autogen/mocs_compilation.cpp.o CMakeFiles/Haprocrates.dir/main.cpp.o CMakeFiles/Haprocrates.dir/MyWindow.cpp.o CMakeFiles/Haprocrates.dir/EncodingHelper.cpp.o CMakeFiles/Haprocrates.dir/StringHelper.cpp.o CMakeFiles/Haprocrates.dir/CalculatorTab.cpp.o CMakeFiles/Haprocrates.dir/EncodingTab.cpp.o CMakeFiles/Haprocrates.dir/HomeTab.cpp.o CMakeFiles/Haprocrates.dir/StringsTab.cpp.o CMakeFiles/Haprocrates.dir/TabHelper.cpp.o CMakeFiles/Haprocrates.dir/Haprocrates_autogen/EWIEGA46WW/qrc_resources.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || Haprocrates_autogen Haprocrates_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/Haprocrates.dir

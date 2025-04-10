@@ -280,15 +280,33 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/dimi/Desktop/Projects/Harpocrates/CalculatorTab.h",
+			"MU",
+			"EWIEGA46WW/moc_CalculatorTab.cpp",
+			null
+		],
+		[
 			"/home/dimi/Desktop/Projects/Harpocrates/EncodingHelper.h",
 			"MU",
 			"EWIEGA46WW/moc_EncodingHelper.cpp",
 			null
 		],
 		[
+			"/home/dimi/Desktop/Projects/Harpocrates/EncodingTab.h",
+			"MU",
+			"EWIEGA46WW/moc_EncodingTab.cpp",
+			null
+		],
+		[
 			"/home/dimi/Desktop/Projects/Harpocrates/EncodingType.h",
 			"MU",
 			"EWIEGA46WW/moc_EncodingType.cpp",
+			null
+		],
+		[
+			"/home/dimi/Desktop/Projects/Harpocrates/HomeTab.h",
+			"MU",
+			"EWIEGA46WW/moc_HomeTab.cpp",
 			null
 		],
 		[
@@ -301,6 +319,18 @@
 			"/home/dimi/Desktop/Projects/Harpocrates/StringHelper.h",
 			"MU",
 			"EWIEGA46WW/moc_StringHelper.cpp",
+			null
+		],
+		[
+			"/home/dimi/Desktop/Projects/Harpocrates/StringsTab.h",
+			"MU",
+			"EWIEGA46WW/moc_StringsTab.cpp",
+			null
+		],
+		[
+			"/home/dimi/Desktop/Projects/Harpocrates/TabHelper.h",
+			"MU",
+			"EWIEGA46WW/moc_TabHelper.cpp",
 			null
 		]
 	],
@@ -356,16 +386,25 @@
 	"SOURCES" : 
 	[
 		[
+			"/home/dimi/Desktop/Projects/Harpocrates/CalculatorTab.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/dimi/Desktop/Projects/Harpocrates/EncodingHelper.cpp",
 			"MU",
 			null
 		],
+		[ "/home/dimi/Desktop/Projects/Harpocrates/EncodingTab.cpp", "MU", null ],
+		[ "/home/dimi/Desktop/Projects/Harpocrates/HomeTab.cpp", "MU", null ],
 		[ "/home/dimi/Desktop/Projects/Harpocrates/MyWindow.cpp", "MU", null ],
 		[
 			"/home/dimi/Desktop/Projects/Harpocrates/StringHelper.cpp",
 			"MU",
 			null
 		],
+		[ "/home/dimi/Desktop/Projects/Harpocrates/StringsTab.cpp", "MU", null ],
+		[ "/home/dimi/Desktop/Projects/Harpocrates/TabHelper.cpp", "MU", null ],
 		[ "/home/dimi/Desktop/Projects/Harpocrates/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

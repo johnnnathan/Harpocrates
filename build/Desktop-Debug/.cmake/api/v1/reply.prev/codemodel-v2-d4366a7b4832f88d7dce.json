@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-1485a9ebc9194b3223a7.json",
+					"jsonFile" : "directory-.-Debug-4aa4fcfb7b8c391013bb.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Haprocrates::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Haprocrates-Debug-dab6b00ef2f8bb1705ae.json",
+					"jsonFile" : "target-Haprocrates-Debug-771e97e1e6628e804b03.json",
 					"name" : "Haprocrates",
 					"projectIndex" : 0
 				},

@@ -31,6 +31,16 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         resources.qrc
         StringHelper.cpp
         StringHelper.h
+        HomeTab.h
+        StringsTab.h
+        CalculatorTab.h
+        EncodingTab.h
+        CalculatorTab.cpp
+        EncodingTab.cpp
+        HomeTab.cpp
+        StringsTab.cpp
+        TabHelper.h
+        TabHelper.cpp
 
 
 
