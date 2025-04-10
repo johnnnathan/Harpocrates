@@ -79,16 +79,40 @@ QString removePosition(QString value, int position){
 }
 
 
-QString findPattern(QString input, QString pattern){
+QString findPattern(QString input, QString pattern, int counter){
     QRegularExpression regex(pattern);
     QRegularExpressionMatchIterator match = regex.globalMatch(input);
     QString result;
+    int current = 1;
 
     while (match.hasNext()){
         QRegularExpressionMatch instance = match.next();
-        result += instance.captured(0) + "\n";
+        if (current % counter == 0){
+            result += instance.captured(0) + "\n";
+        }
+        current += 1;
     }
     return result;
+}
+
+
+QString replacePattern(QString input, QString pattern, int counter, QString replacement){
+    QRegularExpression regex(pattern);
+    QRegularExpressionMatchIterator match = regex.globalMatch(input);
+    QString result = input;
+    int current = 1;
+    int offset = 0;
+
+    while (match.hasNext()){
+        QRegularExpressionMatch instance = match.next();
+        if (current % counter == 0){
+            result.replace(instance.capturedStart(0) + offset, instance.capturedLength(0), replacement);
+            offset += replacement.length() - instance.capturedLength(0);
+        }
+        current += 1;
+    }
+    return result;
+
 }
 
 

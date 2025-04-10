@@ -23,5 +23,6 @@ private:
     QTextEdit *stringOutput;
     QLineEdit *stringCharacterType;
     QLineEdit *stringCharacterCounter;
+    QLineEdit *stringReplacementPattern;
 };
 #endif // STRINGSTAB_H

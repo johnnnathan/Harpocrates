@@ -122,10 +122,10 @@ void CalculatorTab::performCalculation() {
 
 
     if (firstInputEncoding == AUTO){
-        firstInputEncoding = getEncoding(secondInputText);
+        firstInputEncoding = getEncoding(firstInputText);
     }
     if (secondInputEncoding == AUTO){
-        secondInputEncoding = getEncoding(firstInputText);
+        secondInputEncoding = getEncoding(secondInputText);
     }
     int operation = operationDropdown->currentIndex();
 

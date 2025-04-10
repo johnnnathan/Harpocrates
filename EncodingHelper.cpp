@@ -156,19 +156,20 @@ int isValid(EncodingType encoding, QString data){
             step = 8;
         }
         break;
-    case HEX:
-
-        valid =  temp.contains(hexRegex); // Check for valid hex characters
-        if (valid){
-            step = 2;
-        }
-        break;
     case DECIMAL:
         //Need to use a temp variable because it alters the value stored inside the variable.
         //Should not remove the spaces in the original variable because it could affect the ascii results, where applicable
         valid = temp.remove(" ").toInt();
         if(valid) {
             step = 1;
+        }
+        break;
+
+    case HEX:
+
+        valid =  temp.contains(hexRegex); // Check for valid hex characters
+        if (valid){
+            step = 2;
         }
         break;
     case ASCII:

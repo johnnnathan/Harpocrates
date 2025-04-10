@@ -21,6 +21,8 @@ void StringsTab::addToTabWidget(QTabWidget* widget){
     stringOutput = new QTextEdit();
     stringCharacterCounter = new QLineEdit();
     stringCharacterType = new QLineEdit();
+    stringReplacementPattern = new QLineEdit();
+    stringReplacementPattern->setPlaceholderText("Replacement Pattern...");
 
     stringInput->setPlaceholderText("Input...");
     stringOutput->setPlaceholderText("Output...");
@@ -36,12 +38,13 @@ void StringsTab::addToTabWidget(QTabWidget* widget){
     stringOperationDropdown->addItem("Append");
     stringOperationDropdown->addItem("Subtract");
     stringOperationDropdown->addItem("Find");
+    stringOperationDropdown->addItem("Replace");
 
     QHBoxLayout *operationLayout = new QHBoxLayout();
     operationLayout->addWidget(stringOperationDropdown);
     operationLayout->addWidget(stringCharacterType);
     operationLayout->addWidget(stringCharacterCounter);
-
+    operationLayout->addWidget(stringReplacementPattern);
     operationLayout->addWidget(operateButton);
 
 
@@ -61,7 +64,11 @@ void StringsTab::addToTabWidget(QTabWidget* widget){
 void StringsTab::performStringOperation(){
     QString input = stringInput->toPlainText();
     QString output;
+    QString replacementPattern = stringReplacementPattern->text();
     int characterCounter = stringCharacterCounter->text().toInt();
+    if (characterCounter == 0){
+        characterCounter = 1;
+    }
     QString characterType = stringCharacterType->text();
     int operation = stringOperationDropdown->currentIndex();
     int length = input.length();
@@ -80,7 +87,9 @@ void StringsTab::performStringOperation(){
         }
         break;
     case 2:
-        output = findPattern(input, characterType);
+        output = findPattern(input, characterType, characterCounter);
+    case 3:
+        output = replacePattern(input, characterType, characterCounter, replacementPattern);
     default:
         break;
     }
