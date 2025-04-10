@@ -1550,6 +1550,9 @@
 			"path" : "/usr/share/cmake-3.22/Modules/GNUInstallDirs.cmake"
 		},
 		{
+			"path" : "images.qrc"
+		},
+		{
 			"path" : "resources.qrc"
 		}
 	],

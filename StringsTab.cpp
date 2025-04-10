@@ -17,8 +17,8 @@ void StringsTab::addToTabWidget(QTabWidget* widget){
 
     QPushButton *operateButton = new QPushButton("=", this);
 
-    stringInput = new QLineEdit();
-    stringOutput = new QLineEdit();
+    stringInput = new QTextEdit();
+    stringOutput = new QTextEdit();
     stringCharacterCounter = new QLineEdit();
     stringCharacterType = new QLineEdit();
 
@@ -35,6 +35,7 @@ void StringsTab::addToTabWidget(QTabWidget* widget){
 
     stringOperationDropdown->addItem("Append");
     stringOperationDropdown->addItem("Subtract");
+    stringOperationDropdown->addItem("Find");
 
     QHBoxLayout *operationLayout = new QHBoxLayout();
     operationLayout->addWidget(stringOperationDropdown);
@@ -58,7 +59,7 @@ void StringsTab::addToTabWidget(QTabWidget* widget){
 
 
 void StringsTab::performStringOperation(){
-    QString input = stringInput->text();
+    QString input = stringInput->toPlainText();
     QString output;
     int characterCounter = stringCharacterCounter->text().toInt();
     QString characterType = stringCharacterType->text();
@@ -78,6 +79,8 @@ void StringsTab::performStringOperation(){
             break;
         }
         break;
+    case 2:
+        output = findPattern(input, characterType);
     default:
         break;
     }

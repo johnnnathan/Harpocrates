@@ -2,6 +2,7 @@
 #define STRINGSTAB_H
 
 #include <qcombobox.h>
+#include <qtextedit.h>>
 #pragma once
 #include <QWidget>
 
@@ -18,8 +19,8 @@ public:
 private:
     QWidget   *stringTab;
     QComboBox *stringOperationDropdown;
-    QLineEdit *stringInput;
-    QLineEdit *stringOutput;
+    QTextEdit *stringInput;
+    QTextEdit *stringOutput;
     QLineEdit *stringCharacterType;
     QLineEdit *stringCharacterCounter;
 };

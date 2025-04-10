@@ -1035,7 +1035,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Haprocrates"
+			"value" : "Harpocrates"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
@@ -1487,6 +1487,42 @@
 		},
 		{
 			"name" : "Haprocrates_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/dimi/Harpocrates"
+		},
+		{
+			"name" : "Harpocrates_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug"
+		},
+		{
+			"name" : "Harpocrates_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "Harpocrates_SOURCE_DIR",
 			"properties" : 
 			[
 				{

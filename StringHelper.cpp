@@ -77,3 +77,19 @@ QString removePosition(QString value, int position){
     }
     return result;
 }
+
+
+QString findPattern(QString input, QString pattern){
+    QRegularExpression regex(pattern);
+    QRegularExpressionMatchIterator match = regex.globalMatch(input);
+    QString result;
+
+    while (match.hasNext()){
+        QRegularExpressionMatch instance = match.next();
+        result += instance.captured(0) + "\n";
+    }
+    return result;
+}
+
+
+
