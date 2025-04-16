@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_Harpocrates_FILE /home/dimi/Harpocrates/build/Desktop_Qt_6_8_0-Debug/Harpocrates)
-set(__QT_DEPLOY_TARGET_Harpocrates_TYPE EXECUTABLE)

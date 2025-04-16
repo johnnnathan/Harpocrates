@@ -1,9 +1,0 @@
-/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/CMakeFiles/Haprocrates.dir
-/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/CMakeFiles/edit_cache.dir
-/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
-/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/CMakeFiles/list_install_components.dir
-/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/CMakeFiles/install.dir
-/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/CMakeFiles/install/local.dir
-/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/CMakeFiles/install/strip.dir
-/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/CMakeFiles/Haprocrates_autogen_timestamp_deps.dir
-/home/dimi/Desktop/Projects/Harpocrates/build/Desktop-Debug/CMakeFiles/Haprocrates_autogen.dir
