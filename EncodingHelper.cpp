@@ -20,8 +20,8 @@ EncodingType getEncodingType(int dropdownSelection)
         return AUTO;
     default:
         popup("Invalid Encoding type, I don't know how you did this, congratulations!!!");
-        return NONE;
     }
+    return NONE;
 }
 
 

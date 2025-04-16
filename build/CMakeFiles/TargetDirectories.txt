@@ -1,8 +1,8 @@
-/home/dimi/Harpocrates/build/CMakeFiles/Haprocrates.dir
+/home/dimi/Harpocrates/build/CMakeFiles/Harpocrates.dir
 /home/dimi/Harpocrates/build/CMakeFiles/edit_cache.dir
 /home/dimi/Harpocrates/build/CMakeFiles/rebuild_cache.dir
 /home/dimi/Harpocrates/build/CMakeFiles/list_install_components.dir
 /home/dimi/Harpocrates/build/CMakeFiles/install.dir
 /home/dimi/Harpocrates/build/CMakeFiles/install/local.dir
 /home/dimi/Harpocrates/build/CMakeFiles/install/strip.dir
-/home/dimi/Harpocrates/build/CMakeFiles/Haprocrates_autogen.dir
+/home/dimi/Harpocrates/build/CMakeFiles/Harpocrates_autogen.dir

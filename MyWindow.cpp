@@ -2,6 +2,7 @@
 #include <QVBoxLayout>
 #include "CalculatorTab.h"
 #include "HomeTab.h"
+#include "NotesTab.h"
 #include "StringsTab.h"
 #include "EncodingTab.h"
 #include <QPushButton>
@@ -25,7 +26,8 @@ MyWindow::MyWindow(QWidget *parent)
     calc->addToTabWidget(tabWidget);
     StringsTab* strings = new StringsTab();
     strings->addToTabWidget(tabWidget);
-
+    NotesTab* notes = new NotesTab();
+    notes->addToTabWidget(tabWidget);
 
 
 

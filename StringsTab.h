@@ -2,7 +2,7 @@
 #define STRINGSTAB_H
 
 #include <qcombobox.h>
-#include <qtextedit.h>>
+#include <qtextedit.h>
 #pragma once
 #include <QWidget>
 

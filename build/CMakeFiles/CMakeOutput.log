@@ -228,3 +228,85 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0be97/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0be97.dir/build.make CMakeFiles/cmTC_0be97.dir/build
+gmake[1]: Entering directory '/home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0be97.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -std=gnu++17 -o CMakeFiles/cmTC_0be97.dir/CheckIncludeFile.cxx.o -c /home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_0be97
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0be97.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_0be97.dir/CheckIncludeFile.cxx.o -o cmTC_0be97 
+gmake[1]: Leaving directory '/home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_43c22/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_43c22.dir/build.make CMakeFiles/cmTC_43c22.dir/build
+gmake[1]: Entering directory '/home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_43c22.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -o CMakeFiles/cmTC_43c22.dir/src.cxx.o -c /home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_43c22
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43c22.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_43c22.dir/src.cxx.o -o cmTC_43c22 
+gmake[1]: Leaving directory '/home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test HAVE_STDATOMIC succeeded with the following output:
+Change Dir: /home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f0244/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f0244.dir/build.make CMakeFiles/cmTC_f0244.dir/build
+gmake[1]: Entering directory '/home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f0244.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_STDATOMIC  -std=gnu++17 -o CMakeFiles/cmTC_f0244.dir/src.cxx.o -c /home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_f0244
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0244.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_f0244.dir/src.cxx.o -o cmTC_f0244 
+gmake[1]: Leaving directory '/home/dimi/Harpocrates/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <atomic>
+#include <cstdint>
+
+void test(volatile std::atomic<std::int64_t> &a)
+{
+    std::int64_t v = a.load(std::memory_order_acquire);
+    while (!a.compare_exchange_strong(v, v + 1,
+                                      std::memory_order_acq_rel,
+                                      std::memory_order_acquire)) {
+        v = a.exchange(v - 1);
+    }
+    a.store(v + 1, std::memory_order_release);
+}
+
+int main(int, char **)
+{
+    void *ptr = (void*)0xffffffc0; // any random pointer
+    test(*reinterpret_cast<std::atomic<std::int64_t> *>(ptr));
+    return 0;
+}
